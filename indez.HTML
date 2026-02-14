@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardian Flow</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #2e003e, #5f0f9f, #9d4edd);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 38px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #c77dff, #7b2cbf);
+    color: white;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(45deg, #e0aaff, #9d4edd);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container" id="content">
+    <h1>AslamO Alaikum 🕊️</h1>
+    <button onclick="step1()">Walaikumsalam</button>
+</div>
+
+<script>
+
+function step1() {
+    document.getElementById("content").innerHTML = `
+        <h1>How are you doing?</h1>
+        <button onclick="step2()">I am doing great</button>
+        <button onclick="step2()">ok</button>
+    `;
+}
+
+function step2() {
+    document.getElementById("content").innerHTML = `
+        <h1>How is the weather in Pakistan?</h1>
+        <button onclick="step3()">pretty good</button>
+        <button onclick="step3()">the fever of february</button>
+    `;
+}
+
+function step3() {
+    document.getElementById("content").innerHTML = `
+        <h1>It was conveyed that you greatly enjoyed the experience.</h1>
+        <button onclick="step4()">good</button>
+    `;
+}
+
+function step4() {
+    document.getElementById("content").innerHTML = `
+        <h1>Did you provide incorrect information?</h1>
+        <button onclick="step5()">always</button>
+    `;
+}
+
+function step5() {
+    document.getElementById("content").innerHTML = `
+        <h1>And tell me what does Guardian mean?</h1>
+        <button onclick="step6()">an institute</button>
+        <button onclick="step6()">the part of my planning</button>
+    `;
+}
+
+function step6() {
+    document.getElementById("content").innerHTML = `
+        <h1>Why is the individual persistently contacting me?<br>Keep reaching out from different phone numbers. No professionalism?</h1>
+        <button onclick="step7()">it was me</button>
+    `;
+}
+
+function step7() {
+    document.getElementById("content").innerHTML = `
+        <h1>Guardian Mate Khuda Hafiz 🕊️</h1>
+    `;
+}
+
+</script>
+
+</body>
+</html>
